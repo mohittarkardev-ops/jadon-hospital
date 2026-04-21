@@ -22,6 +22,9 @@ export const metadata: Metadata = {
     default: "Jadon Hospital & Ultrasound Centre | Farah, Mathura", // Used on the homepage
   },
   description: "24/7 Advanced Medical Care, Ultrasound Response, High-Resolution Ultrasound, and Pathology Laboratory in Farah, Mathura.",
+  verification: {
+    google: "AZhRyjMo_Kr9MoRpJz-3TKadU-cxWJDDRSufnDIxIH0",
+  },
   keywords: ["Hospital in Farah", "Ultrasound Centre Mathura", "Ultrasound Farah", "Pathology Lab Mathura", "Emergency Doctor"],
   openGraph: {
     title: "Jadon Hospital & Ultrasound Centre",
