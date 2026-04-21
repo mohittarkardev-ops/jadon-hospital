@@ -68,7 +68,7 @@ export default function BentoServices() {
               <p className="text-red-100 font-medium">Immediate Emergency Response</p>
             </div>
           </div>
-          <Link href="tel:+91XXXXXXXXXX" className="relative z-10 bg-white text-red-600 p-4 rounded-full hover:scale-110 transition-transform shadow-xl">
+          <Link href="tel:+918384844353" className="relative z-10 bg-white text-red-600 p-4 rounded-full hover:scale-110 transition-transform shadow-xl">
             <ArrowRight className="w-6 h-6" />
           </Link>
         </div>

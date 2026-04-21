@@ -1,5 +1,6 @@
 import SchemaMarkup from '@/components/seo/SchemaMarkup';
 import { MapPin, Phone, Mail, Clock, Send, Info, HelpCircle } from 'lucide-react';
+import AddressPicker from '@/components/home/AddressPicker';
 
 export default function PatientInfoPage() {
   // E-E-A-T: FAQ Schema for Rich Snippets
@@ -179,6 +180,7 @@ export default function PatientInfoPage() {
 
         </div>
       </section>
+      <AddressPicker />
     </main>
   );
 }
