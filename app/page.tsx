@@ -39,14 +39,33 @@ export default function Home() {
       }
     ],
     "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Medical Services",
-      "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Emergency Trauma Care" } },
-        { "@type": "Offer", "itemOffered": { "@type": { "@id": "https://en.wikipedia.org/wiki/Ultrasound", "name": "High-Resolution Ultrasound" } } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pathology Laboratory" } }
-      ]
-    }
+    "@type": "OfferCatalog",
+    "name": "Medical Services",
+    "itemListElement": [
+      { 
+        "@type": "Offer", 
+        "itemOffered": { 
+          "@type": "Service", 
+          "name": "Emergency Trauma Care" 
+        } 
+      },
+      { 
+        "@type": "Offer", 
+        "itemOffered": { 
+          "@type": "Service", 
+          "name": "High-Resolution Ultrasound",
+          "description": "State-of-the-art 3D/4D diagnostic imaging."
+        } 
+      },
+      { 
+        "@type": "Offer", 
+        "itemOffered": { 
+          "@type": "Service", 
+          "name": "Pathology Laboratory" 
+        } 
+      }
+    ]
+  }
   };
 
   return (
