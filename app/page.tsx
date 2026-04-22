@@ -19,7 +19,7 @@ export default function Home() {
     "image": "https://jadon-hospital.vercel.app/og-image.jpg", // Replace with real photo later
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "NH-19, nearby PM Shri Govt. Girls' Inter College",
+      "streetAddress": "NH-19, Nearby PM Shri Govt. Girls' Inter College",
       "addressLocality": "Farah",
       "addressRegion": "Uttar Pradesh",
       "postalCode": "281122",

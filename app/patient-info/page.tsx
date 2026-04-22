@@ -1,6 +1,5 @@
 import SchemaMarkup from '@/components/seo/SchemaMarkup';
 import { MapPin, Phone, Mail, Clock, Send, Info, HelpCircle } from 'lucide-react';
-import AddressPicker from '@/components/home/AddressPicker';
 
 export default function PatientInfoPage() {
   // E-E-A-T: FAQ Schema for Rich Snippets
@@ -21,7 +20,7 @@ export default function PatientInfoPage() {
         "name": "Where are you located?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We are located at NH-19, nearby PM Shri Govt. Girls' Inter College, Farah, Mathura, Uttar Pradesh 281122."
+          "text": "We are located at NH-19, Nearby PM Shri Govt. Girls' Inter College, Farah, Mathura, Uttar Pradesh 281122."
         }
       }
     ]
@@ -69,7 +68,7 @@ export default function PatientInfoPage() {
                   </div>
                   <div>
                     <p className="font-bold text-slate-900 mb-1">Location</p>
-                    <p className="text-slate-600 text-sm leading-relaxed">NH-19, nearby PM Shri Govt. Girls&apos; Inter College,<br />Farah, Mathura, UP 281122</p>
+                    <p className="text-slate-600 text-sm leading-relaxed">NH-19, Nearby PM Shri Govt. Girls&apos; Inter College,<br />Farah, Mathura, UP 281122</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
@@ -87,7 +86,7 @@ export default function PatientInfoPage() {
                   </div>
                   <div>
                     <p className="font-bold text-slate-900 mb-1">Email Support</p>
-                    <p className="text-slate-600 text-sm">contact@jadonhospital.com</p>
+                    <p className="text-slate-600 text-sm">nvsict06@gmail.com</p>
                   </div>
                 </li>
               </ul>
@@ -180,7 +179,6 @@ export default function PatientInfoPage() {
 
         </div>
       </section>
-      <AddressPicker />
     </main>
   );
 }
