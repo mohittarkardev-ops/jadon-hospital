@@ -1,6 +1,11 @@
 import SchemaMarkup from '@/components/seo/SchemaMarkup';
 import Link from 'next/link';
-import { Stethoscope, Award, GraduationCap, ArrowRight, ShieldCheck, Microscope } from 'lucide-react';
+import { Stethoscope, Award, GraduationCap, ArrowRight, ShieldCheck, Microscope, Activity } from 'lucide-react';
+
+export const metadata = {
+  title: 'Our Doctors',
+  description: 'Meet the expert medical team at Jadon Hospital. Led by Dr. Madhupal Singh (MBBS, MS) and Dr. Neha Singh (MBBS).',
+};
 
 export default function TeamPage() {
   // E-E-A-T: Physician Schema linked to your Hospital Entity
@@ -9,17 +14,17 @@ export default function TeamPage() {
     "@graph": [
       {
         "@type": "Physician",
-        "name": "Dr. John Doe", 
-        "jobTitle": "Chief Radiologist",
-        "medicalSpecialty": "Radiology",
+        "name": "Dr. Madhupal Singh", 
+        "jobTitle": "Chief Surgeon & Head of Trauma",
+        "medicalSpecialty": "General Surgery",
         "worksFor": { "@id": "https://jadon-hospital.vercel.app/#clinic" },
         "url": "https://jadon-hospital.vercel.app/team"
       },
       {
         "@type": "Physician",
-        "name": "Dr. Jane Smith", 
-        "jobTitle": "Senior Pathologist",
-        "medicalSpecialty": "Pathology",
+        "name": "Dr. Neha Singh", 
+        "jobTitle": "Lead Physician & Diagnostics Head",
+        "medicalSpecialty": "General Medicine",
         "worksFor": { "@id": "https://jadon-hospital.vercel.app/#clinic" },
         "url": "https://jadon-hospital.vercel.app/team"
       }
@@ -28,12 +33,13 @@ export default function TeamPage() {
 
   return (
     <main className="min-h-screen bg-slate-50 font-sans pb-24 selection:bg-teal-200 selection:text-teal-900">
+      {/* Invisible SEO Engine */}
       <SchemaMarkup schema={teamSchema} />
       
       {/* Premium Hero Section */}
-      <section className="bg-slate-900 pt-20 pb-40 px-6 relative overflow-hidden">
-        {/* Background Glow */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-full bg-teal-900/30 blur-[120px] rounded-full pointer-events-none"></div>
+      <section className="bg-slate-950 pt-20 pb-40 px-6 relative overflow-hidden">
+        {/* Background Glow - Hidden on mobile for GPU performance */}
+        <div className="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-full bg-teal-900/30 blur-[120px] rounded-full pointer-events-none"></div>
         
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-sm font-bold tracking-wide mb-6">
@@ -43,7 +49,7 @@ export default function TeamPage() {
             Meet Our Specialists
           </h1>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
-            Expert care delivered by highly qualified professionals. Our medical team brings decades of combined experience to ensure your health is in the best hands.
+            Expert care delivered by highly qualified professionals. Our clinical team brings decades of combined experience to ensure your health is in the best hands.
           </p>
         </div>
       </section>
@@ -52,33 +58,33 @@ export default function TeamPage() {
       <section className="max-w-5xl mx-auto px-6 -mt-24 relative z-20">
         <div className="grid md:grid-cols-2 gap-8">
           
-          {/* Doctor Card 1: Radiologist */}
+          {/* Doctor Card 1: Dr. Madhupal Singh */}
           <div className="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 hover:-translate-y-2 transition-transform duration-300 flex flex-col group">
             
             <div className="flex items-start justify-between mb-6">
               <div className="bg-teal-50 w-16 h-16 rounded-2xl flex items-center justify-center text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors duration-300 shrink-0">
-                <Stethoscope className="w-8 h-8" />
+                <Activity className="w-8 h-8" />
               </div>
               <span className="bg-slate-50 text-slate-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-slate-200">
-                Radiology
+                Surgery & Trauma
               </span>
             </div>
 
-            <h2 className="text-3xl font-extrabold text-slate-900 mb-1 tracking-tight">Dr. John Doe</h2>
-            <p className="text-teal-600 font-bold mb-8 text-lg">Chief Radiologist</p>
+            <h2 className="text-3xl font-extrabold text-slate-900 mb-1 tracking-tight">Dr. Madhupal Singh</h2>
+            <p className="text-teal-600 font-bold mb-8 text-lg">Chief Surgeon & Head of Trauma</p>
 
             <div className="space-y-4 mb-10 flex-grow">
               <div className="flex items-start gap-3 text-slate-600">
                 <GraduationCap className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
-                <p><strong className="text-slate-900">Education:</strong><br/>MBBS, MD (Radiology)</p>
+                <p><strong className="text-slate-900">Education:</strong><br/>MBBS, MS</p>
               </div>
               <div className="flex items-start gap-3 text-slate-600">
                 <Award className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
-                <p><strong className="text-slate-900">Experience:</strong><br/>Over 15 years in advanced diagnostic imaging and ultrasonography.</p>
+                <p><strong className="text-slate-900">Expertise:</strong><br/>Extensive surgical expertise leading the trauma and surgical departments at Jadon Hospital.</p>
               </div>
               <div className="flex items-start gap-3 text-slate-600">
                 <ShieldCheck className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
-                <p><strong className="text-slate-900">Registration No:</strong><br/>XXXXXX</p>
+                <p><strong className="text-slate-900">Commitment:</strong><br/>Ensures emergency operations and general surgeries are executed with peak clinical precision.</p>
               </div>
             </div>
 
@@ -90,33 +96,33 @@ export default function TeamPage() {
             </div>
           </div>
 
-          {/* Doctor Card 2: Pathologist */}
+          {/* Doctor Card 2: Dr. Neha Singh */}
           <div className="bg-white p-8 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 hover:-translate-y-2 transition-transform duration-300 flex flex-col group">
             
             <div className="flex items-start justify-between mb-6">
               <div className="bg-teal-50 w-16 h-16 rounded-2xl flex items-center justify-center text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors duration-300 shrink-0">
-                <Microscope className="w-8 h-8" />
+                <Stethoscope className="w-8 h-8" />
               </div>
               <span className="bg-slate-50 text-slate-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-slate-200">
-                Pathology
+                Diagnostics & Medicine
               </span>
             </div>
 
-            <h2 className="text-3xl font-extrabold text-slate-900 mb-1 tracking-tight">Dr. Jane Smith</h2>
-            <p className="text-teal-600 font-bold mb-8 text-lg">Senior Pathologist</p>
+            <h2 className="text-3xl font-extrabold text-slate-900 mb-1 tracking-tight">Dr. Neha Singh</h2>
+            <p className="text-teal-600 font-bold mb-8 text-lg">Lead Physician & Diagnostics Head</p>
 
             <div className="space-y-4 mb-10 flex-grow">
               <div className="flex items-start gap-3 text-slate-600">
                 <GraduationCap className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
-                <p><strong className="text-slate-900">Education:</strong><br/>MBBS, MD (Pathology)</p>
+                <p><strong className="text-slate-900">Education:</strong><br/>MBBS</p>
               </div>
               <div className="flex items-start gap-3 text-slate-600">
                 <Award className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
-                <p><strong className="text-slate-900">Experience:</strong><br/>Specializing in clinical pathology with a focus on rapid, accurate lab results.</p>
+                <p><strong className="text-slate-900">Expertise:</strong><br/>Oversees the diagnostic and general medicine wings with a focus on high-resolution ultrasound imaging.</p>
               </div>
               <div className="flex items-start gap-3 text-slate-600">
                 <ShieldCheck className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
-                <p><strong className="text-slate-900">Registration No:</strong><br/>YYYYYY</p>
+                <p><strong className="text-slate-900">Commitment:</strong><br/>Dedicated to providing highly accurate maternal and internal health screenings.</p>
               </div>
             </div>
 

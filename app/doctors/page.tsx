@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Stethoscope, Award, Activity, ArrowRight, ShieldCheck, CalendarCheck } from 'lucide-react';
 
 export const metadata = {
@@ -33,8 +34,8 @@ export default function DoctorsPage() {
       
       {/* 1. Page Header */}
       <section className="bg-slate-950 pt-20 pb-32 px-6 relative overflow-hidden">
-        {/* Decorative Glow */}
-        <div className="absolute top-0 right-1/4 w-full max-w-2xl h-full bg-teal-900/40 blur-[120px] rounded-full pointer-events-none"></div>
+        {/* Decorative Glow - Hidden on mobile to prevent GPU lag */}
+        <div className="hidden md:block absolute top-0 right-1/4 w-full max-w-2xl h-full bg-teal-900/40 blur-[120px] rounded-full pointer-events-none"></div>
         
         <div className="max-w-6xl mx-auto relative z-10 text-center md:text-left flex flex-col md:flex-row md:items-end justify-between gap-8">
           <div className="max-w-2xl">
@@ -60,12 +61,14 @@ export default function DoctorsPage() {
               
               {/* Doctor Header (Image & Name) */}
               <div className="flex flex-col sm:flex-row gap-6 items-start mb-8">
-                {/* Photo Placeholder / Image */}
+                {/* Optimized Next.js Image */}
                 <div className="w-32 h-32 shrink-0 bg-slate-100 rounded-3xl overflow-hidden border-4 border-white shadow-lg relative">
-                  <img 
+                  <Image 
                     src={doctor.image} 
                     alt={doctor.name} 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+                    fill
+                    sizes="(max-width: 768px) 128px, 128px"
+                    className="object-cover group-hover:scale-110 transition-transform duration-700" 
                   />
                   {/* Fallback if image is missing */}
                   <div className="absolute inset-0 flex items-center justify-center text-slate-300 -z-10">
